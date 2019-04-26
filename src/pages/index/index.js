@@ -1,49 +1,56 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
-import { connect } from '@tarojs/redux'
+import { AtTabBar ,AtIcon } from 'taro-ui'
 
-import { add, minus, asyncAdd } from '../../actions/counter'
+import Cinema from '../cinema/'
+import Match from '../match/'
+import Movie from '../movie/'
+import My from '../my/'
+import Show from '../show/'
 
-import './index.scss'
-
-
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
-}))
 class Index extends Component {
-
-    config = {
+  config = {
     navigationBarTitleText: '首页'
   }
-
-  componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
+  constructor () {
+    super(...arguments)
+    this.state = {
+      current: 2
+    }
   }
 
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
+  handleClick(current) {
+    this.setState({
+      current
+    })
+  }
+  
 
   render () {
+
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+      
+     { this.state.current === 0 && <Cinema/> }
+     { this.state.current === 1 && <Match/> }
+     { this.state.current === 2 && <Movie/> }
+     { this.state.current === 3 && <My/> }
+     { this.state.current === 4 && <Show/> }
+
+      <AtTabBar
+          tabList={[
+            { title: '影院', iconType: 'iconfont icon-favor', color: '#ff0000',},
+            { title: '电影', iconType: 'iconfont icon-emoji' },
+            { title: '演出', iconType: 'iconfont icon-home' },
+            { title: '赛事', iconType: 'iconfont icon-like' },
+            { title: '我的', iconType: 'iconfont icon-my' },
+          ]}
+          fixed
+          color='#333333'
+          selectedColor='#fe403a'
+          onClick={this.handleClick.bind(this)}
+          current={this.state.current}
+        />
       </View>
     )
   }

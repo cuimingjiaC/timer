@@ -1,6 +1,6 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "myApp",
+	"projectname": "cmj-miniapp",
 	"description": "",
 	"appid": "touristappid",
 	"setting": {

@@ -1,0 +1,146 @@
+@import "~taro-ui/dist/style/components/toast.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+
+.movieContainer{
+  overflow: auto;
+  height: 100%;
+  .header {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      .cityChoose{
+          width: 130px;
+          text-align: center;
+          line-height: 80px;
+          color:666666;
+          font-size: 24px;
+      };
+      .searchBar{
+          flex:1
+      }
+  }
+  .swiper-container {
+      height: 0;
+      font-size: 0;
+      position: relative;
+      padding-bottom: 20%;
+      .test-h {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        View {
+          width: 100%;
+          height: 100%;
+          Image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  
+   .classify {
+    width: 100%;
+    height: 360px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  
+    .classifyItem{
+      width:20%;
+      height: 160px;
+      font-size: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color:#2c2c2c;
+      box-sizing: border-box;
+      padding: 5px;
+      
+      .imgContainer{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+        Image{
+          width: 100%;
+          height: 100%
+        }
+      }
+    }
+   } 
+  
+  .adContainer{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    .adImg {
+      width: 90%;
+      height: 100%;
+      border-radius: 70px;
+      overflow: hidden;
+      Image{
+        width:100%;
+        height: 100%
+      }
+    }
+  }
+  
+  .findContainer {
+    width: 100%;
+    text-align: center;
+    height:80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    .smallLeftIcon {
+      width: 40px;
+      height:40px;
+      margin:0 10px;
+    }
+    .smallRightIcon {
+      width: 40px;
+      height:40px;
+      margin:0 10px;
+    }
+  }
+
+  .recommendItem {
+    padding: 30px;
+    box-sizing: border-box;
+    clear: both;
+    .imgLeftCon{
+      width: 30%;
+      float: left;
+      height:300px;
+      margin-right:30px;
+      Image{
+        width:100%;
+        height:100%;
+      }
+    }
+    .infoRightCon{
+      .title{
+        font-size: 30px;
+        font-weight:600;
+      }
+      .time{
+        margin-top: 30px;
+        color:#a9a9a9;
+        font-size: 24px;
+      }
+      .address{
+        color:#a9a9a9;
+        font-size: 24px;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,132 @@
+
+@import "~taro-ui/dist/style/components/divider.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/modal.scss";
+
+.detailCon{
+    // background-image: url('../../assets/images/bg.png');
+    // padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .box{
+        width:90%;
+        height:100%;
+        overflow: auto;
+        padding-bottom: 130px;
+        .headerCon{
+            width:100%;
+            margin-top:20px;
+            border-radius: 10px;
+            Image{
+                width:100%;
+                border-radius: 10px;
+
+            }
+        
+        }
+        .addressCon{
+            margin-top:20px;
+            color: #fff;
+            .icon-address {
+                width: 30px;
+                height: 30px;
+            }
+            .addressInfo {
+                font-size: 28px;
+            }
+         }
+        .showDetail {
+            margin-top:20px;
+            color: #fff;
+            font-size:30px;
+            .showDetailName{
+                margin-top:20px;
+                font-weight: 600;
+            }
+            .showDetailActor{
+                margin-top:20px;
+            }
+            .shareBox{
+                height: 90px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .shareFriends{
+                    height: 100%;
+                    width: 90%;
+                    background-color: #fdb52d;
+                    text-align: center;
+                    line-height: 90px;
+                    margin: 20px 0 ;
+                    border-radius: 50px;
+                    font-size:30px;
+                }
+               
+            }
+            .shoeDetailrecReason{
+                margin-top:20px;
+            }
+        }
+    }
+    .footerOrder{
+        position: fixed;
+        bottom: 10px;
+        height: 100px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .btn {
+            box-sizing: border-box;
+            width: 90%;
+            height: 80%;
+            border-radius: 10px;
+            background-color: #f13e39;
+            text-align: center;
+            line-height: 80px;
+            color: #ffffff
+        }
+    }
+
+    .atModal{
+        // position: relative;
+        .closebtn{
+            position: relative;
+            width:100%;
+            height:60px;
+            Text{
+                position: absolute;
+                top:0;
+                right:0;
+                // background-color: blue;
+                // background-color: rgba($color: #000000, $alpha: 0.5);
+                // color: #fff
+            }
+        }
+        .atModalShareBox{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .atModalShareFriends{
+                background-color: #f13e39;
+                width: 70%;
+                height: 60px;
+                border-radius: 10px;
+                .shareText{
+                    color:#fff;
+                    text-align: center;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+
+
